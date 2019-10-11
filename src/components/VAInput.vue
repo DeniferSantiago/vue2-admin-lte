@@ -1,9 +1,7 @@
 <template>
 
   <div v-if="isHorizontal"
-    class="form-group"
-  >
-
+    class="form-group">
     <label :for="vaId" class="col-sm-2 control-label">{{ title }}</label>
     <div class="col-sm-10">
       <input
@@ -12,9 +10,7 @@
         :id="vaId"
         :placeholder="placeholder"
         :value="value">
-      </input>
     </div>
-
   </div>
   <input v-else
          :type="type"
@@ -23,9 +19,6 @@
          :placeholder="placeholder"
          :value="value"
          :disabled="isDisabled">
-  </input>
-
-
 </template>
 
 <script>
@@ -70,7 +63,6 @@ export default {
       if (!this.size) {
         return ''
       }
-
       return 'input-' + this.size
     },
     formControl () {

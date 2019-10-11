@@ -1,6 +1,7 @@
 <template>
   <button type="button" class="btn"
     :class="[isBlock?'btn-block':'', btnTheme, disabled, flat, size, getAlign]"
+    @click="$emit('click',$event)"
   >
     {{name}}
     <slot></slot>
